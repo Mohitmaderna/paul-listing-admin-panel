@@ -12,6 +12,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { signOut, useSession } from "next-auth/react";
+/**
+ * A component that displays the user's navigation menu.
+ * @returns {JSX.Element | undefined} The user navigation menu or undefined if there is no session.
+ */
 export function UserNav() {
   const { data: session } = useSession();
   if (session) {

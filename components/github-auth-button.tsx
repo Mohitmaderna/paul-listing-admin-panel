@@ -5,6 +5,10 @@ import { signIn } from "next-auth/react";
 import { Button } from "./ui/button";
 import { Icons } from "./icons";
 
+/**
+ * A button for signing in with Google.
+ * @returns {JSX.Element} The Google sign-in button component.
+ */
 export default function GoogleSignInButton() {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl");

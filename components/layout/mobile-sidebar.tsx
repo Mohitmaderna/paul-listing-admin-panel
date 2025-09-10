@@ -7,10 +7,18 @@ import { useState } from "react";
 
 // import { Playlist } from "../data/playlists";
 
+/**
+ * Props for the MobileSidebar component.
+ */
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   // playlists: Playlist[];
 }
 
+/**
+ * A mobile sidebar component that displays the navigation items.
+ * @param {SidebarProps} props - The props for the component.
+ * @returns {JSX.Element} The mobile sidebar component.
+ */
 export function MobileSidebar({ className }: SidebarProps) {
   const [open, setOpen] = useState(false);
   return (

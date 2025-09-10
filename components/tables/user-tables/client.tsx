@@ -8,10 +8,21 @@ import { Plus } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { columns } from "./columns";
 
+/**
+ * Props for the UserClient component.
+ */
 interface ProductsClientProps {
+  /**
+   * The data for the table.
+   */
   data: User[];
 }
 
+/**
+ * A client component for displaying user data.
+ * @param {ProductsClientProps} props - The props for the component.
+ * @returns {JSX.Element} The user client component.
+ */
 export const UserClient: React.FC<ProductsClientProps> = ({ data }) => {
   const router = useRouter();
 

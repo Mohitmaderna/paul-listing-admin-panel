@@ -8,11 +8,19 @@ import { getServerSession } from "next-auth";
 
 const inter = Inter({ subsets: ["latin"] });
 
+/**
+ * The metadata for the root layout.
+ */
 export const metadata: Metadata = {
   title: "Next Shadcn",
   description: "Basic dashboard with Next.js and Shadcn",
 };
 
+/**
+ * The root layout for the application.
+ * @param {{ children: React.ReactNode }} props - The props for the component.
+ * @returns {Promise<JSX.Element>} The root layout.
+ */
 export default async function RootLayout({
   children,
 }: {

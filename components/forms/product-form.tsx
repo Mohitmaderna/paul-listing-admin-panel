@@ -29,6 +29,9 @@ import { Checkbox } from "@/components/ui/checkbox";
 // import FileUpload from "@/components/FileUpload";
 import { useToast } from "../ui/use-toast";
 import FileUpload from "../file-upload";
+/**
+ * Schema for validating image objects.
+ */
 const ImgSchema = z.object({
   fileName: z.string(),
   name: z.string(),
@@ -39,7 +42,15 @@ const ImgSchema = z.object({
   fileUrl: z.string(),
   url: z.string(),
 });
+
+/**
+ * The maximum number of images that can be uploaded.
+ */
 export const IMG_MAX_LIMIT = 3;
+
+/**
+ * Schema for validating the product form.
+ */
 const formSchema = z.object({
   name: z
     .string()
@@ -55,13 +66,30 @@ const formSchema = z.object({
   category: z.string().min(1, { message: "Please select a category" }),
 });
 
+/**
+ * Type for the product form values.
+ */
 type ProductFormValues = z.infer<typeof formSchema>;
 
+/**
+ * Props for the ProductForm component.
+ */
 interface ProductFormProps {
+  /**
+   * The initial data for the form.
+   */
   initialData: any | null;
+  /**
+   * The categories to be displayed in the form.
+   */
   categories: any;
 }
 
+/**
+ * A form for creating and editing products.
+ * @param {ProductFormProps} props - The props for the component.
+ * @returns {JSX.Element} The product form component.
+ */
 export const ProductForm: React.FC<ProductFormProps> = ({
   initialData,
   categories,

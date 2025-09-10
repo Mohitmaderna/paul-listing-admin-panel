@@ -24,6 +24,11 @@ import { useTaskStore } from "@/lib/store";
 import { UniqueIdentifier } from "@dnd-kit/core";
 import { Input } from "../ui/input";
 
+/**
+ * A component that provides actions for a column.
+ * @param {{ title: string; id: UniqueIdentifier }} props - The props for the component.
+ * @returns {JSX.Element} The column actions component.
+ */
 export function ColumnActions({
   title,
   id,

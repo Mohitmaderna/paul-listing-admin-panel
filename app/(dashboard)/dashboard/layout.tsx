@@ -2,11 +2,19 @@ import Header from "@/components/layout/header";
 import Sidebar from "@/components/layout/sidebar";
 import type { Metadata } from "next";
 
+/**
+ * The metadata for the dashboard layout.
+ */
 export const metadata: Metadata = {
   title: "Next Shadcn Dashboard Starter",
   description: "Basic dashboard with Next.js and Shadcn",
 };
 
+/**
+ * The layout for the dashboard.
+ * @param {{ children: React.ReactNode }} props - The props for the component.
+ * @returns {JSX.Element} The dashboard layout.
+ */
 export default function DashboardLayout({
   children,
 }: {

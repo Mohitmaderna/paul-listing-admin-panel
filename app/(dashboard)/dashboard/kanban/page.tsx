@@ -3,7 +3,15 @@ import { KanbanBoard } from "@/components/kanban/kanban-board";
 import NewTaskDialog from "@/components/kanban/new-task-dialog";
 import { Heading } from "@/components/ui/heading";
 
+/**
+ * The breadcrumb items for the Kanban page.
+ */
 const breadcrumbItems = [{ title: "Kanban", link: "/dashboard/kanban" }];
+
+/**
+ * The Kanban page.
+ * @returns {JSX.Element} The Kanban page.
+ */
 export default function page() {
   return (
     <>

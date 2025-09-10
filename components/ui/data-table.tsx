@@ -20,12 +20,33 @@ import { Input } from "./input";
 import { Button } from "./button";
 import { ScrollArea, ScrollBar } from "./scroll-area";
 
+/**
+ * Props for the DataTable component.
+ * @template TData - The type of the data.
+ * @template TValue - The type of the value.
+ */
 interface DataTableProps<TData, TValue> {
+  /**
+   * The columns for the table.
+   */
   columns: ColumnDef<TData, TValue>[];
+  /**
+   * The data for the table.
+   */
   data: TData[];
+  /**
+   * The key to search for in the data.
+   */
   searchKey: string;
 }
 
+/**
+ * A data table component that can be used to display data in a table.
+ * @template TData - The type of the data.
+ * @template TValue - The type of the value.
+ * @param {DataTableProps<TData, TValue>} props - The props for the component.
+ * @returns {JSX.Element} The data table component.
+ */
 export function DataTable<TData, TValue>({
   columns,
   data,

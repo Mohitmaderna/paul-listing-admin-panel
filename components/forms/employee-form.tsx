@@ -26,6 +26,9 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import FileUpload from "../file-upload";
 import { useToast } from "../ui/use-toast";
+/**
+ * Schema for validating image objects.
+ */
 const ImgSchema = z.object({
   fileName: z.string(),
   name: z.string(),
@@ -36,7 +39,15 @@ const ImgSchema = z.object({
   fileUrl: z.string(),
   url: z.string(),
 });
+
+/**
+ * The maximum number of images that can be uploaded.
+ */
 export const IMG_MAX_LIMIT = 3;
+
+/**
+ * Schema for validating the employee form.
+ */
 const formSchema = z.object({
   name: z
     .string()
@@ -52,13 +63,30 @@ const formSchema = z.object({
   category: z.string().min(1, { message: "Please select a category" }),
 });
 
+/**
+ * Type for the employee form values.
+ */
 type ProductFormValues = z.infer<typeof formSchema>;
 
+/**
+ * Props for the EmployeeForm component.
+ */
 interface ProductFormProps {
+  /**
+   * The initial data for the form.
+   */
   initialData: any | null;
+  /**
+   * The categories to be displayed in the form.
+   */
   categories: any;
 }
 
+/**
+ * A form for creating and editing employees.
+ * @param {ProductFormProps} props - The props for the component.
+ * @returns {JSX.Element} The employee form component.
+ */
 export const EmployeeForm: React.FC<ProductFormProps> = ({
   initialData,
   categories,

@@ -2,6 +2,10 @@ import { DashboardNav } from "@/components/dashboard-nav";
 import { navItems } from "@/constants/data";
 import { cn } from "@/lib/utils";
 
+/**
+ * A sidebar component that displays the navigation items.
+ * @returns {JSX.Element} The sidebar component.
+ */
 export default function Sidebar() {
   return (
     <nav

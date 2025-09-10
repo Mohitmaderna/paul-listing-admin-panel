@@ -5,10 +5,19 @@ import * as PopoverPrimitive from "@radix-ui/react-popover";
 
 import { cn } from "@/lib/utils";
 
+/**
+ * A popover component that can be used to display content in a floating box.
+ */
 const Popover = PopoverPrimitive.Root;
 
+/**
+ * A button that opens the popover.
+ */
 const PopoverTrigger = PopoverPrimitive.Trigger;
 
+/**
+ * The content of the popover.
+ */
 const PopoverContent = React.forwardRef<
   React.ElementRef<typeof PopoverPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>

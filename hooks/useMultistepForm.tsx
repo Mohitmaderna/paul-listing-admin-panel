@@ -1,5 +1,10 @@
 import { ReactElement, useCallback, useState } from "react";
 
+/**
+ * A custom hook for creating a multi-step form.
+ * @param {ReactElement[]} steps - The steps of the form.
+ * @returns {object} An object with the current step index, the current step, the steps, whether the current step is the first step, whether the current step is the last step, a function to go to a specific step, a function to go to the next step, and a function to go to the previous step.
+ */
 export default function useMultistepForm(steps: ReactElement[]) {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
 

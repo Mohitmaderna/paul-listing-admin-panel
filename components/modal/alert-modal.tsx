@@ -3,13 +3,33 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Modal } from "@/components/ui/modal";
 
+/**
+ * Props for the AlertModal component.
+ */
 interface AlertModalProps {
+  /**
+   * Whether the modal is open.
+   */
   isOpen: boolean;
+  /**
+   * A function to be called when the modal is closed.
+   */
   onClose: () => void;
+  /**
+   * A function to be called when the confirm button is clicked.
+   */
   onConfirm: () => void;
+  /**
+   * Whether the modal is in a loading state.
+   */
   loading: boolean;
 }
 
+/**
+ * A modal for displaying an alert.
+ * @param {AlertModalProps} props - The props for the component.
+ * @returns {JSX.Element | null} The alert modal component or null if not mounted.
+ */
 export const AlertModal: React.FC<AlertModalProps> = ({
   isOpen,
   onClose,

@@ -17,12 +17,22 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import GoogleSignInButton from "../github-auth-button";
 
+/**
+ * Schema for validating the user authentication form.
+ */
 const formSchema = z.object({
   email: z.string().email({ message: "Enter a valid email address" }),
 });
 
+/**
+ * Type for the user authentication form values.
+ */
 type UserFormValue = z.infer<typeof formSchema>;
 
+/**
+ * A form for user authentication.
+ * @returns {JSX.Element} The user authentication form component.
+ */
 export default function UserAuthForm() {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get("callbackUrl");

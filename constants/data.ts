@@ -1,6 +1,9 @@
 import { Icons } from "@/components/icons";
 import { NavItem, SidebarNavItem } from "@/types";
 
+/**
+ * A user in the application.
+ */
 export type User = {
   id: number;
   name: string;
@@ -9,6 +12,10 @@ export type User = {
   verified: boolean;
   status: string;
 };
+
+/**
+ * A list of users.
+ */
 export const users: User[] = [
   {
     id: 1,
@@ -92,6 +99,9 @@ export const users: User[] = [
   },
 ];
 
+/**
+ * An employee in the application.
+ */
 export type Employee = {
   id: number;
   first_name: string;
@@ -111,6 +121,9 @@ export type Employee = {
   profile_picture?: string | null; // Profile picture can be a string (URL) or null (if no picture)
 };
 
+/**
+ * The navigation items for the application.
+ */
 export const navItems: NavItem[] = [
   {
     title: "Dashboard",

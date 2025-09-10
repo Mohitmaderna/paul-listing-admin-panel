@@ -2,7 +2,15 @@ import BreadCrumb from "@/components/breadcrumb";
 import { CreateProfileOne } from "@/components/forms/user-profile-stepper/create-profile";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
+/**
+ * The breadcrumb items for the profile page.
+ */
 const breadcrumbItems = [{ title: "Profile", link: "/dashboard/profile" }];
+
+/**
+ * The profile page.
+ * @returns {JSX.Element} The profile page.
+ */
 export default function page() {
   return (
     <ScrollArea className="h-full">

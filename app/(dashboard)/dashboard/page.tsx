@@ -12,6 +12,10 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
+/**
+ * The dashboard page.
+ * @returns {JSX.Element} The dashboard page.
+ */
 export default function page() {
   return (
     <ScrollArea className="h-full">

@@ -2,6 +2,10 @@ import BreadCrumb from "@/components/breadcrumb";
 import { ProductForm } from "@/components/forms/product-form";
 import React from "react";
 
+/**
+ * The page for creating a new employee.
+ * @returns {JSX.Element} The page for creating a new employee.
+ */
 export default function Page() {
   const breadcrumbItems = [
     { title: "Employee", link: "/dashboard/employee" },

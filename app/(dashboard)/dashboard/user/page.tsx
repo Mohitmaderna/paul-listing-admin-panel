@@ -2,7 +2,15 @@ import BreadCrumb from "@/components/breadcrumb";
 import { UserClient } from "@/components/tables/user-tables/client";
 import { users } from "@/constants/data";
 
+/**
+ * The breadcrumb items for the user page.
+ */
 const breadcrumbItems = [{ title: "User", link: "/dashboard/user" }];
+
+/**
+ * The user page.
+ * @returns {JSX.Element} The user page.
+ */
 export default function page() {
   return (
     <>

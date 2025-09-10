@@ -30,6 +30,30 @@ This is a starter template using the following stack:
 
 *If you are looking for a React admin dashboard starter, here is the [repo](https://github.com/Kiranism/react-shadcn-dashboard-starter).* 
 
+## Project Structure
+
+The project is organized into the following directories:
+
+- **app**: Contains the application's pages and API routes.
+- **components**: Contains the application's reusable components.
+- **constants**: Contains the application's constants.
+- **hooks**: Contains the application's custom hooks.
+- **lib**: Contains the application's utility functions and libraries.
+- **public**: Contains the application's static assets.
+- **styles**: Contains the application's global styles.
+
+## Components
+
+The application includes a variety of reusable components, including:
+
+- **Authentication**: Components for user authentication, including a login form and a social media sign-in button.
+- **Dashboard**: Components for building a dashboard, including charts, tables, and cards.
+- **Forms**: Components for building forms, including a variety of input fields and a file uploader.
+- **Kanban Board**: Components for building a Kanban board, including columns, cards, and a drag-and-drop interface.
+- **Modals**: Components for displaying modals, including an alert modal and a confirmation modal.
+- **Tables**: Components for building tables, including a data table and a variety of cell types.
+- **UI**: A variety of UI components, including buttons, badges, and tabs.
+
 ## Pages
 
 | Pages                                                                             | Specifications                                                                                        |
@@ -56,4 +80,3 @@ Follow these steps to clone the repository and start the development server:
 - `npm run dev`
 
 You should now be able to access the application at http://localhost:3000.
-

@@ -4,8 +4,14 @@ import { persist } from "zustand/middleware";
 import { Column } from "@/components/kanban/board-column";
 import { UniqueIdentifier } from "@dnd-kit/core";
 
+/**
+ * The status of a task.
+ */
 export type Status = "TODO" | "IN_PROGRESS" | "DONE";
 
+/**
+ * The default columns for the board.
+ */
 const defaultCols = [
   {
     id: "TODO" as const,
@@ -13,8 +19,14 @@ const defaultCols = [
   },
 ] satisfies Column[];
 
+/**
+ * The ID of a column.
+ */
 export type ColumnId = (typeof defaultCols)[number]["id"];
 
+/**
+ * A task on the board.
+ */
 export type Task = {
   id: string;
   title: string;
@@ -22,12 +34,18 @@ export type Task = {
   status: Status;
 };
 
+/**
+ * The state of the task store.
+ */
 export type State = {
   tasks: Task[];
   columns: Column[];
   draggedTask: string | null;
 };
 
+/**
+ * The actions for the task store.
+ */
 export type Actions = {
   addTask: (title: string, description?: string) => void;
   addCol: (title: string) => void;
@@ -39,6 +57,9 @@ export type Actions = {
   updateCol: (id: UniqueIdentifier, newName: string) => void;
 };
 
+/**
+ * A Zustand store for managing tasks.
+ */
 export const useTaskStore = create<State & Actions>()(
   persist(
     (set) => ({

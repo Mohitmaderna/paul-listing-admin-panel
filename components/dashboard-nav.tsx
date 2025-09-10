@@ -8,11 +8,25 @@ import { cn } from "@/lib/utils";
 import { NavItem } from "@/types";
 import { Dispatch, SetStateAction } from "react";
 
+/**
+ * Props for the DashboardNav component.
+ */
 interface DashboardNavProps {
+  /**
+   * An array of navigation items to be displayed.
+   */
   items: NavItem[];
+  /**
+   * An optional function to close the mobile sidebar.
+   */
   setOpen?: Dispatch<SetStateAction<boolean>>;
 }
 
+/**
+ * A navigation component for the dashboard sidebar.
+ * @param {DashboardNavProps} props - The props for the component.
+ * @returns {JSX.Element | null} The navigation component or null if there are no items.
+ */
 export function DashboardNav({ items, setOpen }: DashboardNavProps) {
   const path = usePathname();
 

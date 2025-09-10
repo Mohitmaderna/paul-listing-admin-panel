@@ -3,6 +3,10 @@ import { ProductForm } from "@/components/forms/product-form";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import React from "react";
 
+/**
+ * The page for creating a new user.
+ * @returns {JSX.Element} The page for creating a new user.
+ */
 export default function Page() {
   const breadcrumbItems = [
     { title: "User", link: "/dashboard/user" },

@@ -39,8 +39,14 @@ const defaultCols = [
   },
 ] satisfies Column[];
 
+/**
+ * The ID of a column.
+ */
 export type ColumnId = (typeof defaultCols)[number]["id"];
 
+/**
+ * The initial tasks for the board.
+ */
 const initialTasks: Task[] = [
   {
     id: "task1",
@@ -53,6 +59,11 @@ const initialTasks: Task[] = [
     title: "Gather requirements from stakeholders",
   },
 ];
+
+/**
+ * A Kanban board component.
+ * @returns {JSX.Element | undefined} The Kanban board component or undefined if not mounted.
+ */
 export function KanbanBoard() {
   // const [columns, setColumns] = useState<Column[]>(defaultCols);
   const columns = useTaskStore((state) => state.columns);

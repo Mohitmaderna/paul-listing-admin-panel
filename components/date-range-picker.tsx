@@ -12,6 +12,11 @@ import { addDays, format } from "date-fns";
 import * as React from "react";
 import { DateRange } from "react-day-picker";
 
+/**
+ * A component for selecting a date range.
+ * @param {React.HTMLAttributes<HTMLDivElement>} props - The props for the component.
+ * @returns {JSX.Element} The date range picker component.
+ */
 export function CalendarDateRangePicker({
   className,
 }: React.HTMLAttributes<HTMLDivElement>) {

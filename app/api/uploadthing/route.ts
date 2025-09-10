@@ -2,7 +2,9 @@ import { createNextRouteHandler } from "uploadthing/next";
 
 import { ourFileRouter } from "./core";
 
-// Export routes for Next App Router
+/**
+ * The GET and POST routes for the uploadthing API.
+ */
 export const { GET, POST } = createNextRouteHandler({
   router: ourFileRouter,
 });

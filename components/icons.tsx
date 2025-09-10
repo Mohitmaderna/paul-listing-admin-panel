@@ -31,8 +31,14 @@ import {
   X,
 } from "lucide-react";
 
+/**
+ * A type for the icons used in the application.
+ */
 export type Icon = LucideIcon;
 
+/**
+ * An object containing all the icons used in the application.
+ */
 export const Icons = {
   dashboard: LayoutDashboardIcon,
   logo: Command,

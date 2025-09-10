@@ -13,6 +13,10 @@ import { Input } from "@/components/ui/input";
 
 import { useTaskStore } from "@/lib/store";
 
+/**
+ * A dialog for adding a new section to the board.
+ * @returns {JSX.Element} The new section dialog component.
+ */
 export default function NewSectionDialog() {
   const addCol = useTaskStore((state) => state.addCol);
 

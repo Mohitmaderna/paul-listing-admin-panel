@@ -2,6 +2,10 @@ import { NextAuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import CredentialProvider from "next-auth/providers/credentials";
 
+/**
+ * The authentication options for NextAuth.
+ * @type {NextAuthOptions}
+ */
 export const authOptions: NextAuthOptions = {
   providers: [
     GithubProvider({

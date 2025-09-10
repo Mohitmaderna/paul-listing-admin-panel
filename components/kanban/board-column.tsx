@@ -10,24 +10,50 @@ import { Card, CardContent, CardHeader } from "../ui/card";
 import { ColumnActions } from "./column-action";
 import { TaskCard } from "./task-card";
 
+/**
+ * Represents a column on the board.
+ */
 export interface Column {
   id: UniqueIdentifier;
   title: string;
 }
 
+/**
+ * The type of a column.
+ */
 export type ColumnType = "Column";
 
+/**
+ * The data for a dragged column.
+ */
 export interface ColumnDragData {
   type: ColumnType;
   column: Column;
 }
 
+/**
+ * Props for the BoardColumn component.
+ */
 interface BoardColumnProps {
+  /**
+   * The column to be displayed.
+   */
   column: Column;
+  /**
+   * The tasks in the column.
+   */
   tasks: Task[];
+  /**
+   * Whether the column is an overlay.
+   */
   isOverlay?: boolean;
 }
 
+/**
+ * A component that displays a column on the board.
+ * @param {BoardColumnProps} props - The props for the component.
+ * @returns {JSX.Element} The board column component.
+ */
 export function BoardColumn({ column, tasks, isOverlay }: BoardColumnProps) {
   const tasksIds = useMemo(() => {
     return tasks.map((task) => task.id);
@@ -105,6 +131,11 @@ export function BoardColumn({ column, tasks, isOverlay }: BoardColumnProps) {
   );
 }
 
+/**
+ * A container for the board columns.
+ * @param {{ children: React.ReactNode }} props - The props for the component.
+ * @returns {JSX.Element} The board container component.
+ */
 export function BoardContainer({ children }: { children: React.ReactNode }) {
   const dndContext = useDndContext();
 

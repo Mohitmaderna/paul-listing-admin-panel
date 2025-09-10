@@ -13,18 +13,38 @@ import { Badge } from "../ui/badge";
 //   content: string;
 // }
 
+/**
+ * Props for the TaskCard component.
+ */
 interface TaskCardProps {
+  /**
+   * The task to be displayed.
+   */
   task: Task;
+  /**
+   * Whether the card is an overlay.
+   */
   isOverlay?: boolean;
 }
 
+/**
+ * The type of a task.
+ */
 export type TaskType = "Task";
 
+/**
+ * The data for a dragged task.
+ */
 export interface TaskDragData {
   type: TaskType;
   task: Task;
 }
 
+/**
+ * A component that displays a task card.
+ * @param {TaskCardProps} props - The props for the component.
+ * @returns {JSX.Element} The task card component.
+ */
 export function TaskCard({ task, isOverlay }: TaskCardProps) {
   const {
     setNodeRef,

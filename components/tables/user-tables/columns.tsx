@@ -4,6 +4,10 @@ import { CellAction } from "./cell-action";
 import { User } from "@/constants/data";
 import { Checkbox } from "@/components/ui/checkbox";
 
+/**
+ * The columns for the user table.
+ * @type {ColumnDef<User>[]}
+ */
 export const columns: ColumnDef<User>[] = [
   {
     id: "select",

@@ -7,14 +7,29 @@ import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
+/**
+ * A sheet component that can be used to display content in a sliding panel.
+ */
 const Sheet = SheetPrimitive.Root;
 
+/**
+ * A button that opens the sheet.
+ */
 const SheetTrigger = SheetPrimitive.Trigger;
 
+/**
+ * A button that closes the sheet.
+ */
 const SheetClose = SheetPrimitive.Close;
 
+/**
+ * A portal that renders the sheet into a new stacking context.
+ */
 const SheetPortal = SheetPrimitive.Portal;
 
+/**
+ * A dark overlay that covers the content behind the sheet.
+ */
 const SheetOverlay = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
@@ -30,6 +45,9 @@ const SheetOverlay = React.forwardRef<
 ));
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName;
 
+/**
+ * The variants for the sheet component.
+ */
 const sheetVariants = cva(
   "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
   {
@@ -49,10 +67,16 @@ const sheetVariants = cva(
   },
 );
 
+/**
+ * Props for the SheetContent component.
+ */
 interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
     VariantProps<typeof sheetVariants> {}
 
+/**
+ * The content of the sheet.
+ */
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
@@ -74,6 +98,9 @@ const SheetContent = React.forwardRef<
 ));
 SheetContent.displayName = SheetPrimitive.Content.displayName;
 
+/**
+ * The header of the sheet.
+ */
 const SheetHeader = ({
   className,
   ...props
@@ -88,6 +115,9 @@ const SheetHeader = ({
 );
 SheetHeader.displayName = "SheetHeader";
 
+/**
+ * The footer of the sheet.
+ */
 const SheetFooter = ({
   className,
   ...props
@@ -102,6 +132,9 @@ const SheetFooter = ({
 );
 SheetFooter.displayName = "SheetFooter";
 
+/**
+ * The title of the sheet.
+ */
 const SheetTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
@@ -114,6 +147,9 @@ const SheetTitle = React.forwardRef<
 ));
 SheetTitle.displayName = SheetPrimitive.Title.displayName;
 
+/**
+ * The description of the sheet.
+ */
 const SheetDescription = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>

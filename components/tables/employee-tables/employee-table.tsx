@@ -35,19 +35,55 @@ import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
+/**
+ * Props for the EmployeeTable component.
+ * @template TData - The type of the data.
+ * @template TValue - The type of the value.
+ */
 interface DataTableProps<TData, TValue> {
+  /**
+   * The columns for the table.
+   */
   columns: ColumnDef<TData, TValue>[];
+  /**
+   * The data for the table.
+   */
   data: TData[];
+  /**
+   * The key to search for in the data.
+   */
   searchKey: string;
+  /**
+   * The current page number.
+   */
   pageNo: number;
+  /**
+   * The total number of users.
+   */
   totalUsers: number;
+  /**
+   * The options for the page size.
+   */
   pageSizeOptions?: number[];
+  /**
+   * The total number of pages.
+   */
   pageCount: number;
+  /**
+   * The search parameters.
+   */
   searchParams?: {
     [key: string]: string | string[] | undefined;
   };
 }
 
+/**
+ * A table for displaying employee data.
+ * @template TData - The type of the data.
+ * @template TValue - The type of the value.
+ * @param {DataTableProps<TData, TValue>} props - The props for the component.
+ * @returns {JSX.Element} The employee table component.
+ */
 export function EmployeeTable<TData, TValue>({
   columns,
   data,

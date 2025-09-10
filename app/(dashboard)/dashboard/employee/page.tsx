@@ -11,12 +11,20 @@ import Link from "next/link";
 
 const breadcrumbItems = [{ title: "Employee", link: "/dashboard/employee" }];
 
+/**
+ * The props for the page component.
+ */
 type paramsProps = {
   searchParams: {
     [key: string]: string | string[] | undefined;
   };
 };
 
+/**
+ * The employee page.
+ * @param {paramsProps} props - The props for the component.
+ * @returns {Promise<JSX.Element>} The employee page.
+ */
 export default async function page({ searchParams }: paramsProps) {
   const page = Number(searchParams.page) || 1;
   const pageLimit = Number(searchParams.limit) || 10;

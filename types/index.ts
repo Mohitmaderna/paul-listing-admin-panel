@@ -1,5 +1,8 @@
 import { Icons } from "@/components/icons";
 
+/**
+ * A navigation item.
+ */
 export interface NavItem {
   title: string;
   href?: string;
@@ -10,14 +13,23 @@ export interface NavItem {
   description?: string;
 }
 
+/**
+ * A navigation item with children.
+ */
 export interface NavItemWithChildren extends NavItem {
   items: NavItemWithChildren[];
 }
 
+/**
+ * A navigation item with optional children.
+ */
 export interface NavItemWithOptionalChildren extends NavItem {
   items?: NavItemWithChildren[];
 }
 
+/**
+ * A footer item.
+ */
 export interface FooterItem {
   title: string;
   items: {
@@ -27,6 +39,12 @@ export interface FooterItem {
   }[];
 }
 
+/**
+ * A main navigation item.
+ */
 export type MainNavItem = NavItemWithOptionalChildren;
 
+/**
+ * A sidebar navigation item.
+ */
 export type SidebarNavItem = NavItemWithChildren;

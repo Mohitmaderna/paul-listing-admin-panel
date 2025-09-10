@@ -4,6 +4,10 @@ import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 
+/**
+ * The not found page.
+ * @returns {JSX.Element} The not found page.
+ */
 export default function NotFound() {
   const router = useRouter();
 

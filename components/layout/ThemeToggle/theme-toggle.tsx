@@ -9,7 +9,16 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+/**
+ * Props for the ThemeToggle component.
+ */
 type CompProps = {};
+
+/**
+ * A component for toggling the theme.
+ * @param {CompProps} props - The props for the component.
+ * @returns {JSX.Element} The theme toggle component.
+ */
 export default function ThemeToggle({}: CompProps) {
   const { setTheme } = useTheme();
   return (

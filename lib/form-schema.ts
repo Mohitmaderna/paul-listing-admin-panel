@@ -1,5 +1,8 @@
 import * as z from "zod";
 
+/**
+ * The schema for the profile form.
+ */
 export const profileSchema = z.object({
   firstname: z
     .string()
@@ -36,4 +39,7 @@ export const profileSchema = z.object({
   ),
 });
 
+/**
+ * The type for the profile form values.
+ */
 export type ProfileFormValues = z.infer<typeof profileSchema>;

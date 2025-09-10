@@ -15,6 +15,10 @@ import { Textarea } from "../ui/textarea";
 
 import { useTaskStore } from "@/lib/store";
 
+/**
+ * A dialog for adding a new task to the board.
+ * @returns {JSX.Element} The new task dialog component.
+ */
 export default function NewTaskDialog() {
   const addTask = useTaskStore((state) => state.addTask);
 

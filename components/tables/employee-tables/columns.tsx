@@ -4,6 +4,10 @@ import { Employee } from "@/constants/data";
 import { ColumnDef } from "@tanstack/react-table";
 import { CellAction } from "./cell-action";
 
+/**
+ * The columns for the employee table.
+ * @type {ColumnDef<Employee>[]}
+ */
 export const columns: ColumnDef<Employee>[] = [
   {
     id: "select",

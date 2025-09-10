@@ -2,13 +2,21 @@ import { createUploadthing, type FileRouter } from "uploadthing/next";
 
 const f = createUploadthing();
 
+/**
+ * A fake authentication function.
+ * @returns {{ id: string }} An object with a fake user ID.
+ */
 const auth = () => ({ id: "fakeId" }); // Fake auth function
 
-// FileRouter for your app, can contain multiple FileRoutes
+/**
+ * The file router for the application.
+ * @type {FileRouter}
+ */
 export const ourFileRouter = {
-  // Define as many FileRoutes as you like, each with a unique routeSlug
+  /**
+   * An image uploader that allows users to upload up to 3 images of up to 4MB each.
+   */
   imageUploader: f({ image: { maxFileSize: "4MB", maxFileCount: 3 } })
-    // Set permissions and file types for this FileRoute
     .middleware(async ({}) => {
       // This code runs on your server before upload
       const user = await auth();
@@ -24,4 +32,7 @@ export const ourFileRouter = {
     }),
 } satisfies FileRouter;
 
+/**
+ * The type of the file router.
+ */
 export type OurFileRouter = typeof ourFileRouter;

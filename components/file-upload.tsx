@@ -8,12 +8,30 @@ import { IMG_MAX_LIMIT } from "./forms/product-form";
 import { Button } from "./ui/button";
 import { useToast } from "./ui/use-toast";
 
+/**
+ * Props for the FileUpload component.
+ */
 interface ImageUploadProps {
+  /**
+   * A function to be called when the file is uploaded.
+   */
   onChange?: any;
+  /**
+   * A function to be called when the file is removed.
+   * @param value - The new array of files.
+   */
   onRemove: (value: UploadFileResponse[]) => void;
+  /**
+   * An array of uploaded files.
+   */
   value: UploadFileResponse[];
 }
 
+/**
+ * A component for uploading files.
+ * @param {ImageUploadProps} props - The props for the component.
+ * @returns {JSX.Element} The file upload component.
+ */
 export default function FileUpload({
   onChange,
   onRemove,

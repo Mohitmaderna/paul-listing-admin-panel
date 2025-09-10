@@ -32,11 +32,25 @@ import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 import { SubmitHandler, useFieldArray, useForm } from "react-hook-form";
 
+/**
+ * Props for the CreateProfileOne component.
+ */
 interface ProfileFormType {
+  /**
+   * The initial data for the form.
+   */
   initialData: any | null;
+  /**
+   * The categories to be displayed in the form.
+   */
   categories: any;
 }
 
+/**
+ * A multi-step form for creating a user profile.
+ * @param {ProfileFormType} props - The props for the component.
+ * @returns {JSX.Element} The create profile form component.
+ */
 export const CreateProfileOne: React.FC<ProfileFormType> = ({
   initialData,
   categories,

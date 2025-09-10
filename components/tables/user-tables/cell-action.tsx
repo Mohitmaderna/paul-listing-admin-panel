@@ -13,10 +13,21 @@ import { Edit, MoreHorizontal, Trash } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+/**
+ * Props for the CellAction component.
+ */
 interface CellActionProps {
+  /**
+   * The data for the cell.
+   */
   data: User;
 }
 
+/**
+ * A component that provides actions for a table cell.
+ * @param {CellActionProps} props - The props for the component.
+ * @returns {JSX.Element} The cell action component.
+ */
 export const CellAction: React.FC<CellActionProps> = ({ data }) => {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
